@@ -1,0 +1,40 @@
+*** Settings ***
+Suite Setup         Setup Suite
+Suite Teardown      Close Application
+Library             AppiumLibrary
+Resource            keys.txt
+
+*** Variables ***
+# Appium configurations
+${DEV.APPIUM_SERVER}        http://127.0.0.1:4723/wd/hub
+${DEV.PLATFORM_VERSION}     5.0.2
+${DEV.PLATFORM_NAME}        Android
+${DEV.DEVICE_NAME}          LJC6BMZ999999999
+${DEV.PACKAGE_NAME}         world.of.notes
+${DEV.ACTIVITY_NAME}        notepad.com.won.activities.MainActivity
+
+*** Test Cases ***
+Scenario: Create a new note
+    When User taps on Plus button
+    And User taps on Create Note button
+    And User enters Name and Note Text
+    And User dismisses keyboard and taps on Create Note button
+    Then Note is created successfully
+
+Scenario: Add Note to Favorites and Verify it's present in Favorites List
+    Given 1 note exists
+    When User taps on Note
+    And User taps on Edit Note button
+	And User taps on Star icon
+	User taps on Back arrow
+	And User taps on Sandwich icon
+	And Selects Favorites menu option
+	Then Favorites List contains the Note
+
+Scenario: Delete Note
+    Given 1 note exists
+    When User taps on Note
+    And User taps on Edit Note button
+    And User taps on Dots icon
+    And Selects Delete option
+    Then Note gets deleted

@@ -1,0 +1,63 @@
+*** Variables ***
+${noteName}     Test1
+${noteText}     123
+
+*** Keywords ***
+
+Setup Suite
+    Open Application    ${DEV.APPIUM_SERVER}    platformName=${DEV.PLATFORM_NAME}   platformVersion=${DEV.PLATFORM_VERSION}     deviceName=${DEV.DEVICE_NAME}   appPackage=${DEV.PACKAGE_NAME}  appActivity=${DEV.ACTIVITY_NAME}
+
+
+User taps on Plus button
+    Wait Until Page Contains Element    //android.widget.ImageView[@index='1']
+    Click Element   //android.widget.ImageView[@index='1']
+
+User taps on Create Note button
+    Wait Until Page Contains Element    //android.widget.ImageButton[contains(@resource-id,'fab_text')]
+    Click Element   //android.widget.ImageButton[contains(@resource-id,'fab_text')]
+
+User enters Name and Note Text
+    Wait Until Page Contains Element    //android.widget.EditText[contains(@resource-id,'edit_text_name')]
+    Input Text  edit_text_name  ${noteName}
+    Input Text  edit_text_desc  ${noteText}
+
+User dismisses keyboard and taps on Create Note button
+    Press Keycode   4
+    Click Element   //android.widget.TextView[contains(@resource-id,'create_note_btn_text')]
+
+Note is created successfully
+    Page Should Contain Element     //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
+
+1 note exists
+    Page Should Contain Element     //android.widget.LinearLayout[contains(@resource-id,'note_layout')]
+
+User taps on Note
+    Click Element       //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
+
+User taps on Edit Note button
+    Click Element     //android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]
+
+User taps on Star icon
+    Click Element   //android.widget.TextView[contains(@resource-id,'action_favorite')]
+
+User taps on Back arrow
+    Click Element   //android.widget.ImageButton[@index='0']
+
+User taps on Sandwich icon
+    Click Element   //android.widget.ImageButton[@index='0']
+
+Selects Favorites menu option
+    Click Element   design_menu_item_text
+
+Favorites List contains the Note
+    Page Should Contain Element     //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
+
+User taps on Dots icon
+    Click Element   //android.widget.TextView[contains(@resource-id,'action_dotes')]
+
+Selects Delete option
+    Click Element   //android.widget.LinearLayout[@index='1']
+
+Note gets deleted
+    Page Should Not Contain Element     //android.widget.LinearLayout[contains(@resource-id,'note_layout')]
+
