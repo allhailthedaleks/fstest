@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170803 11:32:36.817" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<robot generated="20170803 12:17:41.622" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
 <suite source="C:\fstest\src\test\QuickNotes\TS1.txt" id="s1" name="TS1">
 <kw type="setup" name="Setup Suite" library="keys">
 <kw name="Open Application" library="AppiumLibrary">
@@ -12,9 +12,9 @@
 <arg>appPackage=${DEV.PACKAGE_NAME}</arg>
 <arg>appActivity=${DEV.ACTIVITY_NAME}</arg>
 </arguments>
-<status status="PASS" endtime="20170803 11:33:15.332" starttime="20170803 11:32:38.023"></status>
+<status status="PASS" endtime="20170803 12:18:13.102" starttime="20170803 12:17:42.253"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:15.332" starttime="20170803 11:32:38.023"></status>
+<status status="PASS" endtime="20170803 12:18:13.102" starttime="20170803 12:17:42.253"></status>
 </kw>
 <test id="s1-t1" name="Scenario: Create a new note">
 <kw name="When User taps on Plus button" library="keys">
@@ -23,17 +23,17 @@
 <arguments>
 <arg>//android.widget.ImageView[@index='1']</arg>
 </arguments>
-<status status="PASS" endtime="20170803 11:33:18.765" starttime="20170803 11:33:15.347"></status>
+<status status="PASS" endtime="20170803 12:18:16.485" starttime="20170803 12:18:13.118"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.ImageView[@index='1']</arg>
 </arguments>
-<msg timestamp="20170803 11:33:18.765" level="INFO">Clicking element '//android.widget.ImageView[@index='1']'.</msg>
-<status status="PASS" endtime="20170803 11:33:19.056" starttime="20170803 11:33:18.765"></status>
+<msg timestamp="20170803 12:18:16.485" level="INFO">Clicking element '//android.widget.ImageView[@index='1']'.</msg>
+<status status="PASS" endtime="20170803 12:18:16.782" starttime="20170803 12:18:16.485"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:19.056" starttime="20170803 11:33:15.347"></status>
+<status status="PASS" endtime="20170803 12:18:16.782" starttime="20170803 12:18:13.118"></status>
 </kw>
 <kw name="And User taps on Create Note button" library="keys">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
@@ -41,25 +41,28 @@
 <arguments>
 <arg>//android.widget.ImageButton[contains(@resource-id,'fab_text')]</arg>
 </arguments>
-<status status="PASS" endtime="20170803 11:33:19.995" starttime="20170803 11:33:19.056"></status>
+<status status="PASS" endtime="20170803 12:18:17.657" starttime="20170803 12:18:16.782"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.ImageButton[contains(@resource-id,'fab_text')]</arg>
 </arguments>
-<msg timestamp="20170803 11:33:19.995" level="INFO">Clicking element '//android.widget.ImageButton[contains(@resource-id,'fab_text')]'.</msg>
-<status status="PASS" endtime="20170803 11:33:20.264" starttime="20170803 11:33:19.995"></status>
+<msg timestamp="20170803 12:18:17.657" level="INFO">Clicking element '//android.widget.ImageButton[contains(@resource-id,'fab_text')]'.</msg>
+<status status="PASS" endtime="20170803 12:18:17.939" starttime="20170803 12:18:17.657"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:20.264" starttime="20170803 11:33:19.056"></status>
+<status status="PASS" endtime="20170803 12:18:17.939" starttime="20170803 12:18:16.782"></status>
 </kw>
-<kw name="And User enters Name and Note Text" library="keys">
+<kw name="And User enters Note name" library="keys">
+<arguments>
+<arg>${noteName}</arg>
+</arguments>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` appears on current page.</doc>
 <arguments>
 <arg>//android.widget.EditText[contains(@resource-id,'edit_text_name')]</arg>
 </arguments>
-<status status="PASS" endtime="20170803 11:33:20.969" starttime="20170803 11:33:20.264"></status>
+<status status="PASS" endtime="20170803 12:18:18.657" starttime="20170803 12:18:17.954"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -67,19 +70,25 @@
 <arg>edit_text_name</arg>
 <arg>${noteName}</arg>
 </arguments>
-<msg timestamp="20170803 11:33:20.969" level="INFO">Typing text 'Test1' into text field 'edit_text_name'</msg>
-<status status="PASS" endtime="20170803 11:33:26.063" starttime="20170803 11:33:20.969"></status>
+<msg timestamp="20170803 12:18:18.657" level="INFO">Typing text 'Test1' into text field 'edit_text_name'</msg>
+<status status="PASS" endtime="20170803 12:18:23.802" starttime="20170803 12:18:18.657"></status>
 </kw>
+<status status="PASS" endtime="20170803 12:18:23.802" starttime="20170803 12:18:17.939"></status>
+</kw>
+<kw name="And User enters Note text" library="keys">
+<arguments>
+<arg>${noteText}</arg>
+</arguments>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>edit_text_desc</arg>
 <arg>${noteText}</arg>
 </arguments>
-<msg timestamp="20170803 11:33:26.063" level="INFO">Typing text '123' into text field 'edit_text_desc'</msg>
-<status status="PASS" endtime="20170803 11:33:31.767" starttime="20170803 11:33:26.063"></status>
+<msg timestamp="20170803 12:18:23.802" level="INFO">Typing text '123' into text field 'edit_text_desc'</msg>
+<status status="PASS" endtime="20170803 12:18:29.497" starttime="20170803 12:18:23.802"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:31.767" starttime="20170803 11:33:20.264"></status>
+<status status="PASS" endtime="20170803 12:18:29.497" starttime="20170803 12:18:23.802"></status>
 </kw>
 <kw name="And User dismisses keyboard and taps on Create Note button" library="keys">
 <kw name="Press Keycode" library="AppiumLibrary">
@@ -87,53 +96,65 @@
 <arguments>
 <arg>4</arg>
 </arguments>
-<status status="PASS" endtime="20170803 11:33:32.277" starttime="20170803 11:33:31.767"></status>
+<status status="PASS" endtime="20170803 12:18:30.013" starttime="20170803 12:18:29.497"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'create_note_btn_text')]</arg>
 </arguments>
-<msg timestamp="20170803 11:33:32.277" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'create_note_btn_text')]'.</msg>
-<status status="PASS" endtime="20170803 11:33:32.615" starttime="20170803 11:33:32.277"></status>
+<msg timestamp="20170803 12:18:30.013" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'create_note_btn_text')]'.</msg>
+<status status="PASS" endtime="20170803 12:18:30.375" starttime="20170803 12:18:30.013"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:32.615" starttime="20170803 11:33:31.767"></status>
+<status status="PASS" endtime="20170803 12:18:30.375" starttime="20170803 12:18:29.497"></status>
 </kw>
 <kw name="Then Note is created successfully" library="keys">
+<kw name="There is Note with name" library="keys">
+<arguments>
+<arg>${noteName}</arg>
+</arguments>
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <doc>Verifies that current page contains `locator` element.</doc>
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']</arg>
 </arguments>
-<msg timestamp="20170803 11:33:33.242" level="INFO">Current page contains element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
-<status status="PASS" endtime="20170803 11:33:33.242" starttime="20170803 11:33:32.615"></status>
+<msg timestamp="20170803 12:18:31.000" level="INFO">Current page contains element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
+<status status="PASS" endtime="20170803 12:18:31.000" starttime="20170803 12:18:30.375"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:33.242" starttime="20170803 11:33:32.615"></status>
+<status status="PASS" endtime="20170803 12:18:31.000" starttime="20170803 12:18:30.375"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:33.242" critical="yes" starttime="20170803 11:33:15.332"></status>
+<status status="PASS" endtime="20170803 12:18:31.000" starttime="20170803 12:18:30.375"></status>
+</kw>
+<status status="PASS" endtime="20170803 12:18:31.000" critical="yes" starttime="20170803 12:18:13.102"></status>
 </test>
 <test id="s1-t2" name="Scenario: Add Note to Favorites">
-<kw name="Given 1 note exists" library="keys">
+<kw name="Given There is Note with name" library="keys">
+<arguments>
+<arg>${noteName}</arg>
+</arguments>
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <doc>Verifies that current page contains `locator` element.</doc>
 <arguments>
-<arg>//android.widget.LinearLayout[contains(@resource-id,'note_layout')]</arg>
+<arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']</arg>
 </arguments>
-<msg timestamp="20170803 11:33:33.367" level="INFO">Current page contains element '//android.widget.LinearLayout[contains(@resource-id,'note_layout')]'.</msg>
-<status status="PASS" endtime="20170803 11:33:33.367" starttime="20170803 11:33:33.257"></status>
+<msg timestamp="20170803 12:18:31.110" level="INFO">Current page contains element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
+<status status="PASS" endtime="20170803 12:18:31.125" starttime="20170803 12:18:31.016"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:33.367" starttime="20170803 11:33:33.257"></status>
+<status status="PASS" endtime="20170803 12:18:31.125" starttime="20170803 12:18:31.016"></status>
 </kw>
 <kw name="When User taps on Note" library="keys">
+<arguments>
+<arg>${noteName}</arg>
+</arguments>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']</arg>
 </arguments>
-<msg timestamp="20170803 11:33:33.367" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
-<status status="PASS" endtime="20170803 11:33:33.617" starttime="20170803 11:33:33.367"></status>
+<msg timestamp="20170803 12:18:31.125" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
+<status status="PASS" endtime="20170803 12:18:31.375" starttime="20170803 12:18:31.125"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:33.617" starttime="20170803 11:33:33.367"></status>
+<status status="PASS" endtime="20170803 12:18:31.375" starttime="20170803 12:18:31.125"></status>
 </kw>
 <kw name="And User taps on Edit Note button" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -141,10 +162,10 @@
 <arguments>
 <arg>//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]</arg>
 </arguments>
-<msg timestamp="20170803 11:33:33.617" level="INFO">Clicking element '//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]'.</msg>
-<status status="PASS" endtime="20170803 11:33:34.421" starttime="20170803 11:33:33.617"></status>
+<msg timestamp="20170803 12:18:31.375" level="INFO">Clicking element '//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]'.</msg>
+<status status="PASS" endtime="20170803 12:18:32.179" starttime="20170803 12:18:31.375"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:34.421" starttime="20170803 11:33:33.617"></status>
+<status status="PASS" endtime="20170803 12:18:32.195" starttime="20170803 12:18:31.375"></status>
 </kw>
 <kw name="And User taps on Star icon" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -152,70 +173,79 @@
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'action_favorite')]</arg>
 </arguments>
-<msg timestamp="20170803 11:33:34.421" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'action_favorite')]'.</msg>
-<status status="PASS" endtime="20170803 11:33:38.205" starttime="20170803 11:33:34.421"></status>
+<msg timestamp="20170803 12:18:32.195" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'action_favorite')]'.</msg>
+<status status="PASS" endtime="20170803 12:18:35.963" starttime="20170803 12:18:32.195"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:38.205" starttime="20170803 11:33:34.421"></status>
+<status status="PASS" endtime="20170803 12:18:35.963" starttime="20170803 12:18:32.195"></status>
 </kw>
-<kw name="Then Note is added to Favorites List" library="keys">
+<kw name="Then Favorites List contains Note" library="keys">
+<arguments>
+<arg>${noteName}</arg>
+</arguments>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.ImageButton[@index='0']</arg>
 </arguments>
-<msg timestamp="20170803 11:33:38.205" level="INFO">Clicking element '//android.widget.ImageButton[@index='0']'.</msg>
-<status status="PASS" endtime="20170803 11:33:38.481" starttime="20170803 11:33:38.205"></status>
+<msg timestamp="20170803 12:18:35.963" level="INFO">Clicking element '//android.widget.ImageButton[@index='0']'.</msg>
+<status status="PASS" endtime="20170803 12:18:36.197" starttime="20170803 12:18:35.963"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.ImageButton[@index='0']</arg>
 </arguments>
-<msg timestamp="20170803 11:33:38.481" level="INFO">Clicking element '//android.widget.ImageButton[@index='0']'.</msg>
-<status status="PASS" endtime="20170803 11:33:39.382" starttime="20170803 11:33:38.481"></status>
+<msg timestamp="20170803 12:18:36.197" level="INFO">Clicking element '//android.widget.ImageButton[@index='0']'.</msg>
+<status status="PASS" endtime="20170803 12:18:37.135" starttime="20170803 12:18:36.197"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>design_menu_item_text</arg>
 </arguments>
-<msg timestamp="20170803 11:33:39.383" level="INFO">Clicking element 'design_menu_item_text'.</msg>
-<status status="PASS" endtime="20170803 11:33:41.862" starttime="20170803 11:33:39.383"></status>
+<msg timestamp="20170803 12:18:37.135" level="INFO">Clicking element 'design_menu_item_text'.</msg>
+<status status="PASS" endtime="20170803 12:18:39.063" starttime="20170803 12:18:37.135"></status>
 </kw>
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <doc>Verifies that current page contains `locator` element.</doc>
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']</arg>
 </arguments>
-<msg timestamp="20170803 11:33:42.820" level="INFO">Current page contains element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
-<status status="PASS" endtime="20170803 11:33:42.820" starttime="20170803 11:33:41.862"></status>
+<msg timestamp="20170803 12:18:39.894" level="INFO">Current page contains element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
+<status status="PASS" endtime="20170803 12:18:39.894" starttime="20170803 12:18:39.063"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:42.820" starttime="20170803 11:33:38.205"></status>
+<status status="PASS" endtime="20170803 12:18:39.894" starttime="20170803 12:18:35.963"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:42.820" critical="yes" starttime="20170803 11:33:33.257"></status>
+<status status="PASS" endtime="20170803 12:18:39.894" critical="yes" starttime="20170803 12:18:31.016"></status>
 </test>
 <test id="s1-t3" name="Scenario: Delete Note">
-<kw name="Given 1 note exists" library="keys">
+<kw name="Given There is Note with name" library="keys">
+<arguments>
+<arg>${noteName}</arg>
+</arguments>
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <doc>Verifies that current page contains `locator` element.</doc>
 <arguments>
-<arg>//android.widget.LinearLayout[contains(@resource-id,'note_layout')]</arg>
+<arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']</arg>
 </arguments>
-<msg timestamp="20170803 11:33:42.898" level="INFO">Current page contains element '//android.widget.LinearLayout[contains(@resource-id,'note_layout')]'.</msg>
-<status status="PASS" endtime="20170803 11:33:42.898" starttime="20170803 11:33:42.820"></status>
+<msg timestamp="20170803 12:18:39.972" level="INFO">Current page contains element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
+<status status="PASS" endtime="20170803 12:18:39.972" starttime="20170803 12:18:39.894"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:42.898" starttime="20170803 11:33:42.820"></status>
+<status status="PASS" endtime="20170803 12:18:39.972" starttime="20170803 12:18:39.894"></status>
 </kw>
 <kw name="When User taps on Note" library="keys">
+<arguments>
+<arg>${noteName}</arg>
+</arguments>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']</arg>
 </arguments>
-<msg timestamp="20170803 11:33:42.898" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
-<status status="PASS" endtime="20170803 11:33:43.136" starttime="20170803 11:33:42.898"></status>
+<msg timestamp="20170803 12:18:39.987" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
+<status status="PASS" endtime="20170803 12:18:40.206" starttime="20170803 12:18:39.972"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:43.136" starttime="20170803 11:33:42.898"></status>
+<status status="PASS" endtime="20170803 12:18:40.206" starttime="20170803 12:18:39.972"></status>
 </kw>
 <kw name="And User taps on Edit Note button" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -223,10 +253,10 @@
 <arguments>
 <arg>//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]</arg>
 </arguments>
-<msg timestamp="20170803 11:33:43.136" level="INFO">Clicking element '//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]'.</msg>
-<status status="PASS" endtime="20170803 11:33:43.922" starttime="20170803 11:33:43.136"></status>
+<msg timestamp="20170803 12:18:40.222" level="INFO">Clicking element '//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]'.</msg>
+<status status="PASS" endtime="20170803 12:18:40.956" starttime="20170803 12:18:40.206"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:43.922" starttime="20170803 11:33:43.136"></status>
+<status status="PASS" endtime="20170803 12:18:40.956" starttime="20170803 12:18:40.206"></status>
 </kw>
 <kw name="And User taps on Dots icon" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -234,10 +264,10 @@
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'action_dotes')]</arg>
 </arguments>
-<msg timestamp="20170803 11:33:43.922" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'action_dotes')]'.</msg>
-<status status="PASS" endtime="20170803 11:33:44.847" starttime="20170803 11:33:43.922"></status>
+<msg timestamp="20170803 12:18:40.956" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'action_dotes')]'.</msg>
+<status status="PASS" endtime="20170803 12:18:41.908" starttime="20170803 12:18:40.956"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:44.847" starttime="20170803 11:33:43.922"></status>
+<status status="PASS" endtime="20170803 12:18:41.908" starttime="20170803 12:18:40.956"></status>
 </kw>
 <kw name="And Selects Delete option" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -245,10 +275,10 @@
 <arguments>
 <arg>//android.widget.LinearLayout[@index='1']</arg>
 </arguments>
-<msg timestamp="20170803 11:33:44.847" level="INFO">Clicking element '//android.widget.LinearLayout[@index='1']'.</msg>
-<status status="PASS" endtime="20170803 11:33:45.882" starttime="20170803 11:33:44.847"></status>
+<msg timestamp="20170803 12:18:41.908" level="INFO">Clicking element '//android.widget.LinearLayout[@index='1']'.</msg>
+<status status="PASS" endtime="20170803 12:18:42.876" starttime="20170803 12:18:41.908"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:45.882" starttime="20170803 11:33:44.847"></status>
+<status status="PASS" endtime="20170803 12:18:42.876" starttime="20170803 12:18:41.908"></status>
 </kw>
 <kw name="Then Note gets deleted" library="keys">
 <kw name="Page Should Not Contain Element" library="AppiumLibrary">
@@ -256,18 +286,18 @@
 <arguments>
 <arg>//android.widget.LinearLayout[contains(@resource-id,'note_layout')]</arg>
 </arguments>
-<msg timestamp="20170803 11:33:45.992" level="INFO">Current page not contains element '//android.widget.LinearLayout[contains(@resource-id,'note_layout')]'.</msg>
-<status status="PASS" endtime="20170803 11:33:46.007" starttime="20170803 11:33:45.882"></status>
+<msg timestamp="20170803 12:18:42.970" level="INFO">Current page not contains element '//android.widget.LinearLayout[contains(@resource-id,'note_layout')]'.</msg>
+<status status="PASS" endtime="20170803 12:18:42.970" starttime="20170803 12:18:42.876"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:46.007" starttime="20170803 11:33:45.882"></status>
+<status status="PASS" endtime="20170803 12:18:42.970" starttime="20170803 12:18:42.876"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:46.007" critical="yes" starttime="20170803 11:33:42.820"></status>
+<status status="PASS" endtime="20170803 12:18:42.970" critical="yes" starttime="20170803 12:18:39.894"></status>
 </test>
 <kw type="teardown" name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application.</doc>
-<status status="PASS" endtime="20170803 11:33:52.412" starttime="20170803 11:33:46.070"></status>
+<status status="PASS" endtime="20170803 12:18:50.177" starttime="20170803 12:18:42.970"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:33:52.412" starttime="20170803 11:32:36.833"></status>
+<status status="PASS" endtime="20170803 12:18:50.177" starttime="20170803 12:17:41.637"></status>
 </suite>
 <statistics>
 <total>

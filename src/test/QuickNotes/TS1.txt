@@ -13,25 +13,30 @@ ${DEV.DEVICE_NAME}          LJC6BMZ999999999    #change to your device name
 ${DEV.PACKAGE_NAME}         world.of.notes
 ${DEV.ACTIVITY_NAME}        notepad.com.won.activities.MainActivity
 
+# Note
+${noteName}     Test1
+${noteText}     123
+
 
 *** Test Cases ***
 Scenario: Create a new note
     When User taps on Plus button
     And User taps on Create Note button
-    And User enters Name and Note Text
+    And User enters Note name   ${noteName}
+    And User enters Note text   ${noteText}
     And User dismisses keyboard and taps on Create Note button
     Then Note is created successfully
 
 Scenario: Add Note to Favorites
-    Given 1 note exists
-    When User taps on Note
+    Given There is Note with name   ${noteName}
+    When User taps on Note  ${noteName}
     And User taps on Edit Note button
     And User taps on Star icon
-    Then Note is added to Favorites List
+    Then Favorites List contains Note    ${noteName}
 
 Scenario: Delete Note
-    Given 1 note exists
-    When User taps on Note
+    Given There is Note with name   ${noteName}
+    When User taps on Note  ${noteName}
     And User taps on Edit Note button
     And User taps on Dots icon
     And Selects Delete option

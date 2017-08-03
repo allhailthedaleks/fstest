@@ -1,8 +1,3 @@
-*** Variables ***
-# Note
-${noteName}     Test1
-${noteText}     123
-
 *** Keywords ***
 Setup Suite
     Open Application    ${DEV.APPIUM_SERVER}    platformName=${DEV.PLATFORM_NAME}   platformVersion=${DEV.PLATFORM_VERSION}
@@ -17,9 +12,13 @@ User taps on Create Note button
     Wait Until Page Contains Element    //android.widget.ImageButton[contains(@resource-id,'fab_text')]
     Click Element   //android.widget.ImageButton[contains(@resource-id,'fab_text')]
 
-User enters Name and Note Text
+User enters Note name
+    [Arguments]      ${noteName}
     Wait Until Page Contains Element    //android.widget.EditText[contains(@resource-id,'edit_text_name')]
     Input Text  edit_text_name  ${noteName}
+
+User enters Note text
+    [Arguments]      ${noteText}
     Input Text  edit_text_desc  ${noteText}
 
 User dismisses keyboard and taps on Create Note button
@@ -28,12 +27,14 @@ User dismisses keyboard and taps on Create Note button
     Click Element   //android.widget.TextView[contains(@resource-id,'create_note_btn_text')]
 
 Note is created successfully
+    There is Note with name     ${noteName}
+
+There is Note with name
+    [Arguments]      ${noteName}
     Page Should Contain Element   //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
 
-1 note exists
-    Page Should Contain Element   //android.widget.LinearLayout[contains(@resource-id,'note_layout')]
-
 User taps on Note
+    [Arguments]      ${noteName}
     Click Element   //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
 
 User taps on Edit Note button
@@ -42,7 +43,8 @@ User taps on Edit Note button
 User taps on Star icon
     Click Element   //android.widget.TextView[contains(@resource-id,'action_favorite')]
 
-Note is added to Favorites List
+Favorites List contains Note
+    [Arguments]      ${noteName}
     # tap on Back arrow
     Click Element   //android.widget.ImageButton[@index='0']
     # tap on sandwich icon
