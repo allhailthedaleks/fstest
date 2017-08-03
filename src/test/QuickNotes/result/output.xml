@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170803 11:03:21.005" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<robot generated="20170803 11:32:36.817" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
 <suite source="C:\fstest\src\test\QuickNotes\TS1.txt" id="s1" name="TS1">
 <kw type="setup" name="Setup Suite" library="keys">
 <kw name="Open Application" library="AppiumLibrary">
@@ -12,9 +12,9 @@
 <arg>appPackage=${DEV.PACKAGE_NAME}</arg>
 <arg>appActivity=${DEV.ACTIVITY_NAME}</arg>
 </arguments>
-<status status="PASS" endtime="20170803 11:04:23.584" starttime="20170803 11:03:21.739"></status>
+<status status="PASS" endtime="20170803 11:33:15.332" starttime="20170803 11:32:38.023"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:04:23.584" starttime="20170803 11:03:21.739"></status>
+<status status="PASS" endtime="20170803 11:33:15.332" starttime="20170803 11:32:38.023"></status>
 </kw>
 <test id="s1-t1" name="Scenario: Create a new note">
 <kw name="When User taps on Plus button" library="keys">
@@ -23,17 +23,17 @@
 <arguments>
 <arg>//android.widget.ImageView[@index='1']</arg>
 </arguments>
-<status status="PASS" endtime="20170803 11:04:27.072" starttime="20170803 11:04:23.584"></status>
+<status status="PASS" endtime="20170803 11:33:18.765" starttime="20170803 11:33:15.347"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.ImageView[@index='1']</arg>
 </arguments>
-<msg timestamp="20170803 11:04:27.072" level="INFO">Clicking element '//android.widget.ImageView[@index='1']'.</msg>
-<status status="PASS" endtime="20170803 11:04:27.353" starttime="20170803 11:04:27.072"></status>
+<msg timestamp="20170803 11:33:18.765" level="INFO">Clicking element '//android.widget.ImageView[@index='1']'.</msg>
+<status status="PASS" endtime="20170803 11:33:19.056" starttime="20170803 11:33:18.765"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:04:27.353" starttime="20170803 11:04:23.584"></status>
+<status status="PASS" endtime="20170803 11:33:19.056" starttime="20170803 11:33:15.347"></status>
 </kw>
 <kw name="And User taps on Create Note button" library="keys">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
@@ -41,17 +41,17 @@
 <arguments>
 <arg>//android.widget.ImageButton[contains(@resource-id,'fab_text')]</arg>
 </arguments>
-<status status="PASS" endtime="20170803 11:04:28.218" starttime="20170803 11:04:27.353"></status>
+<status status="PASS" endtime="20170803 11:33:19.995" starttime="20170803 11:33:19.056"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.ImageButton[contains(@resource-id,'fab_text')]</arg>
 </arguments>
-<msg timestamp="20170803 11:04:28.233" level="INFO">Clicking element '//android.widget.ImageButton[contains(@resource-id,'fab_text')]'.</msg>
-<status status="PASS" endtime="20170803 11:04:28.499" starttime="20170803 11:04:28.233"></status>
+<msg timestamp="20170803 11:33:19.995" level="INFO">Clicking element '//android.widget.ImageButton[contains(@resource-id,'fab_text')]'.</msg>
+<status status="PASS" endtime="20170803 11:33:20.264" starttime="20170803 11:33:19.995"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:04:28.499" starttime="20170803 11:04:27.353"></status>
+<status status="PASS" endtime="20170803 11:33:20.264" starttime="20170803 11:33:19.056"></status>
 </kw>
 <kw name="And User enters Name and Note Text" library="keys">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
@@ -59,7 +59,7 @@
 <arguments>
 <arg>//android.widget.EditText[contains(@resource-id,'edit_text_name')]</arg>
 </arguments>
-<status status="PASS" endtime="20170803 11:04:29.213" starttime="20170803 11:04:28.499"></status>
+<status status="PASS" endtime="20170803 11:33:20.969" starttime="20170803 11:33:20.264"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -67,8 +67,8 @@
 <arg>edit_text_name</arg>
 <arg>${noteName}</arg>
 </arguments>
-<msg timestamp="20170803 11:04:29.215" level="INFO">Typing text 'Test1' into text field 'edit_text_name'</msg>
-<status status="PASS" endtime="20170803 11:04:34.380" starttime="20170803 11:04:29.214"></status>
+<msg timestamp="20170803 11:33:20.969" level="INFO">Typing text 'Test1' into text field 'edit_text_name'</msg>
+<status status="PASS" endtime="20170803 11:33:26.063" starttime="20170803 11:33:20.969"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -76,10 +76,10 @@
 <arg>edit_text_desc</arg>
 <arg>${noteText}</arg>
 </arguments>
-<msg timestamp="20170803 11:04:34.380" level="INFO">Typing text '123' into text field 'edit_text_desc'</msg>
-<status status="PASS" endtime="20170803 11:04:39.882" starttime="20170803 11:04:34.380"></status>
+<msg timestamp="20170803 11:33:26.063" level="INFO">Typing text '123' into text field 'edit_text_desc'</msg>
+<status status="PASS" endtime="20170803 11:33:31.767" starttime="20170803 11:33:26.063"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:04:39.882" starttime="20170803 11:04:28.499"></status>
+<status status="PASS" endtime="20170803 11:33:31.767" starttime="20170803 11:33:20.264"></status>
 </kw>
 <kw name="And User dismisses keyboard and taps on Create Note button" library="keys">
 <kw name="Press Keycode" library="AppiumLibrary">
@@ -87,36 +87,30 @@
 <arguments>
 <arg>4</arg>
 </arguments>
-<status status="PASS" endtime="20170803 11:04:40.420" starttime="20170803 11:04:39.898"></status>
+<status status="PASS" endtime="20170803 11:33:32.277" starttime="20170803 11:33:31.767"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'create_note_btn_text')]</arg>
 </arguments>
-<msg timestamp="20170803 11:04:40.420" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'create_note_btn_text')]'.</msg>
-<status status="PASS" endtime="20170803 11:04:40.776" starttime="20170803 11:04:40.420"></status>
+<msg timestamp="20170803 11:33:32.277" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'create_note_btn_text')]'.</msg>
+<status status="PASS" endtime="20170803 11:33:32.615" starttime="20170803 11:33:32.277"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:04:40.776" starttime="20170803 11:04:39.882"></status>
+<status status="PASS" endtime="20170803 11:33:32.615" starttime="20170803 11:33:31.767"></status>
 </kw>
 <kw name="Then Note is created successfully" library="keys">
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <doc>Verifies that current page contains `locator` element.</doc>
 <arguments>
-<arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test2']</arg>
+<arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']</arg>
 </arguments>
-<msg timestamp="20170803 11:04:41.069" level="INFO">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;hierarchy rotation="0"&gt;&lt;android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,1920]" resource-id="" instance="0"&gt;&lt;android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,1920]" resource-id="" instance="0"&gt;&lt;android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,1920]" resource-id="" instance="1"&gt;&lt;android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,1920]" resource-id="world.of.notes:id/action_bar_root" instance="1"&gt;&lt;android.widget.FrameLayout index="0" text="" class="android.widget.FrameLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,1920]" resource-id="android:id/content" instance="2"&gt;&lt;android.support.v4.widget.DrawerLayout index="0" text="" class="android.support.v4.widget.DrawerLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,1920]" resource-id="world.of.notes:id/drawer_layout" instance="0"&gt;&lt;android.view.View index="0" text="" class="android.view.View" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,1920]" resource-id="" instance="0"&gt;&lt;android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,60][1080,228]" resource-id="" instance="2"&gt;&lt;android.view.View index="0" text="" class="android.view.View" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,60][1080,228]" resource-id="world.of.notes:id/toolbar" instance="1"&gt;&lt;android.widget.ImageButton index="0" text="" class="android.widget.ImageButton" package="world.of.notes" content-desc="Open navigation drawer" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,60][168,228]" resource-id="" instance="0"/&gt;&lt;android.widget.TextView index="1" text="Quick Notes" class="android.widget.TextView" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[180,103][506,184]" resource-id="" instance="0"/&gt;&lt;android.support.v7.widget.LinearLayoutCompat index="2" text="" class="android.support.v7.widget.LinearLayoutCompat" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[648,60][1080,228]" resource-id="" instance="0"&gt;&lt;android.support.v7.widget.LinearLayoutCompat index="0" text="" class="android.support.v7.widget.LinearLayoutCompat" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[648,72][792,216]" resource-id="world.of.notes:id/action_search" instance="1"&gt;&lt;android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[648,72][792,216]" resource-id="world.of.notes:id/search_bar" instance="3"&gt;&lt;android.widget.ImageView index="0" text="" class="android.widget.ImageView" package="world.of.notes" content-desc="Search" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[648,72][792,216]" resource-id="world.of.notes:id/search_button" instance="0"/&gt;&lt;/android.widget.LinearLayout&gt;&lt;/android.support.v7.widget.LinearLayoutCompat&gt;&lt;android.widget.TextView index="1" text="" class="android.widget.TextView" package="world.of.notes" content-desc="Calendar" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="true" password="false" selected="false" bounds="[792,72][936,216]" resource-id="world.of.notes:id/action_calendar" instance="1"/&gt;&lt;android.widget.TextView index="2" text="" class="android.widget.TextView" package="world.of.notes" content-desc="Sort by" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="true" password="false" selected="false" bounds="[936,72][1080,216]" resource-id="world.of.notes:id/action_sort" instance="2"/&gt;&lt;/android.support.v7.widget.LinearLayoutCompat&gt;&lt;/android.view.View&gt;&lt;/android.widget.LinearLayout&gt;&lt;android.widget.FrameLayout index="1" text="" class="android.widget.FrameLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,228][1080,1920]" resource-id="world.of.notes:id/content_frame" instance="3"&gt;&lt;android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,228][1080,1920]" resource-id="" instance="4"&gt;&lt;android.widget.RelativeLayout index="0" text="" class="android.widget.RelativeLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,228][1080,1920]" resource-id="world.of.notes:id/root" instance="0"&gt;&lt;android.support.v7.widget.RecyclerView index="0" text="" class="android.support.v7.widget.RecyclerView" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,228][1080,1920]" resource-id="world.of.notes:id/recyclerView" instance="0"&gt;&lt;android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[54,282][534,522]" resource-id="world.of.notes:id/note_layout" instance="5"&gt;&lt;android.widget.LinearLayout index="0" text="" class="android.widget.LinearLayout" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[54,335][534,469]" resource-id="world.of.notes:id/text_layout" instance="6"&gt;&lt;android.widget.TextView index="0" text="Test1" class="android.widget.TextView" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[54,335][534,420]" resource-id="world.of.notes:id/note_name" instance="3"/&gt;&lt;android.widget.TextView index="1" text="Aug 03, 2017 11:04" class="android.widget.TextView" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[54,420][534,469]" resource-id="world.of.notes:id/note_date" instance="4"/&gt;&lt;/android.widget.LinearLayout&gt;&lt;/android.widget.LinearLayout&gt;&lt;/android.support.v7.widget.RecyclerView&gt;&lt;android.view.View index="1" text="" class="android.view.View" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[708,1310][1020,1860]" resource-id="world.of.notes:id/fab_menu" instance="2"&gt;&lt;android.widget.ImageButton NAF="true" index="0" text="" class="android.widget.ImageButton" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[822,1650][1020,1860]" resource-id="" instance="1"/&gt;&lt;android.widget.ImageView index="1" text="" class="android.widget.ImageView" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[885,1719][957,1791]" resource-id="" instance="1"/&gt;&lt;/android.view.View&gt;&lt;/android.widget.RelativeLayout&gt;&lt;/android.widget.LinearLayout&gt;&lt;/android.widget.FrameLayout&gt;&lt;/android.view.View&gt;&lt;/android.support.v4.widget.DrawerLayout&gt;&lt;/android.widget.FrameLayout&gt;&lt;/android.widget.LinearLayout&gt;&lt;/android.widget.FrameLayout&gt;&lt;/android.widget.LinearLayout&gt;&lt;android.view.View index="1" text="" class="android.view.View" package="world.of.notes" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,60]" resource-id="android:id/statusBarBackground" instance="3"/&gt;&lt;/android.widget.FrameLayout&gt;&lt;/hierarchy&gt;</msg>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170803 11:04:56.404" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20170803 11:04:56.404" starttime="20170803 11:04:41.085"></status>
+<msg timestamp="20170803 11:33:33.242" level="INFO">Current page contains element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
+<status status="PASS" endtime="20170803 11:33:33.242" starttime="20170803 11:33:32.615"></status>
 </kw>
-<msg timestamp="20170803 11:04:56.419" level="FAIL">Page should have contained element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test2']' but did not</msg>
-<status status="FAIL" endtime="20170803 11:04:56.419" starttime="20170803 11:04:40.776"></status>
+<status status="PASS" endtime="20170803 11:33:33.242" starttime="20170803 11:33:32.615"></status>
 </kw>
-<status status="FAIL" endtime="20170803 11:04:56.419" starttime="20170803 11:04:40.776"></status>
-</kw>
-<status status="FAIL" endtime="20170803 11:04:56.419" critical="yes" starttime="20170803 11:04:23.584">Page should have contained element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test2']' but did not</status>
+<status status="PASS" endtime="20170803 11:33:33.242" critical="yes" starttime="20170803 11:33:15.332"></status>
 </test>
 <test id="s1-t2" name="Scenario: Add Note to Favorites">
 <kw name="Given 1 note exists" library="keys">
@@ -125,10 +119,10 @@
 <arguments>
 <arg>//android.widget.LinearLayout[contains(@resource-id,'note_layout')]</arg>
 </arguments>
-<msg timestamp="20170803 11:04:56.544" level="INFO">Current page contains element '//android.widget.LinearLayout[contains(@resource-id,'note_layout')]'.</msg>
-<status status="PASS" endtime="20170803 11:04:56.544" starttime="20170803 11:04:56.435"></status>
+<msg timestamp="20170803 11:33:33.367" level="INFO">Current page contains element '//android.widget.LinearLayout[contains(@resource-id,'note_layout')]'.</msg>
+<status status="PASS" endtime="20170803 11:33:33.367" starttime="20170803 11:33:33.257"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:04:56.544" starttime="20170803 11:04:56.435"></status>
+<status status="PASS" endtime="20170803 11:33:33.367" starttime="20170803 11:33:33.257"></status>
 </kw>
 <kw name="When User taps on Note" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -136,10 +130,10 @@
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']</arg>
 </arguments>
-<msg timestamp="20170803 11:04:56.560" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
-<status status="PASS" endtime="20170803 11:04:56.810" starttime="20170803 11:04:56.560"></status>
+<msg timestamp="20170803 11:33:33.367" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
+<status status="PASS" endtime="20170803 11:33:33.617" starttime="20170803 11:33:33.367"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:04:56.810" starttime="20170803 11:04:56.560"></status>
+<status status="PASS" endtime="20170803 11:33:33.617" starttime="20170803 11:33:33.367"></status>
 </kw>
 <kw name="And User taps on Edit Note button" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -147,10 +141,10 @@
 <arguments>
 <arg>//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]</arg>
 </arguments>
-<msg timestamp="20170803 11:04:56.810" level="INFO">Clicking element '//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]'.</msg>
-<status status="PASS" endtime="20170803 11:04:57.616" starttime="20170803 11:04:56.810"></status>
+<msg timestamp="20170803 11:33:33.617" level="INFO">Clicking element '//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]'.</msg>
+<status status="PASS" endtime="20170803 11:33:34.421" starttime="20170803 11:33:33.617"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:04:57.616" starttime="20170803 11:04:56.810"></status>
+<status status="PASS" endtime="20170803 11:33:34.421" starttime="20170803 11:33:33.617"></status>
 </kw>
 <kw name="And User taps on Star icon" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -158,10 +152,10 @@
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'action_favorite')]</arg>
 </arguments>
-<msg timestamp="20170803 11:04:57.616" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'action_favorite')]'.</msg>
-<status status="PASS" endtime="20170803 11:05:01.426" starttime="20170803 11:04:57.616"></status>
+<msg timestamp="20170803 11:33:34.421" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'action_favorite')]'.</msg>
+<status status="PASS" endtime="20170803 11:33:38.205" starttime="20170803 11:33:34.421"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:05:01.426" starttime="20170803 11:04:57.616"></status>
+<status status="PASS" endtime="20170803 11:33:38.205" starttime="20170803 11:33:34.421"></status>
 </kw>
 <kw name="Then Note is added to Favorites List" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -169,36 +163,36 @@
 <arguments>
 <arg>//android.widget.ImageButton[@index='0']</arg>
 </arguments>
-<msg timestamp="20170803 11:05:01.442" level="INFO">Clicking element '//android.widget.ImageButton[@index='0']'.</msg>
-<status status="PASS" endtime="20170803 11:05:01.682" starttime="20170803 11:05:01.442"></status>
+<msg timestamp="20170803 11:33:38.205" level="INFO">Clicking element '//android.widget.ImageButton[@index='0']'.</msg>
+<status status="PASS" endtime="20170803 11:33:38.481" starttime="20170803 11:33:38.205"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>//android.widget.ImageButton[@index='0']</arg>
 </arguments>
-<msg timestamp="20170803 11:05:01.683" level="INFO">Clicking element '//android.widget.ImageButton[@index='0']'.</msg>
-<status status="PASS" endtime="20170803 11:05:02.826" starttime="20170803 11:05:01.683"></status>
+<msg timestamp="20170803 11:33:38.481" level="INFO">Clicking element '//android.widget.ImageButton[@index='0']'.</msg>
+<status status="PASS" endtime="20170803 11:33:39.382" starttime="20170803 11:33:38.481"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>design_menu_item_text</arg>
 </arguments>
-<msg timestamp="20170803 11:05:02.826" level="INFO">Clicking element 'design_menu_item_text'.</msg>
-<status status="PASS" endtime="20170803 11:05:04.049" starttime="20170803 11:05:02.826"></status>
+<msg timestamp="20170803 11:33:39.383" level="INFO">Clicking element 'design_menu_item_text'.</msg>
+<status status="PASS" endtime="20170803 11:33:41.862" starttime="20170803 11:33:39.383"></status>
 </kw>
 <kw name="Page Should Contain Element" library="AppiumLibrary">
 <doc>Verifies that current page contains `locator` element.</doc>
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']</arg>
 </arguments>
-<msg timestamp="20170803 11:05:04.973" level="INFO">Current page contains element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
-<status status="PASS" endtime="20170803 11:05:04.973" starttime="20170803 11:05:04.050"></status>
+<msg timestamp="20170803 11:33:42.820" level="INFO">Current page contains element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
+<status status="PASS" endtime="20170803 11:33:42.820" starttime="20170803 11:33:41.862"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:05:04.974" starttime="20170803 11:05:01.426"></status>
+<status status="PASS" endtime="20170803 11:33:42.820" starttime="20170803 11:33:38.205"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:05:04.974" critical="yes" starttime="20170803 11:04:56.419"></status>
+<status status="PASS" endtime="20170803 11:33:42.820" critical="yes" starttime="20170803 11:33:33.257"></status>
 </test>
 <test id="s1-t3" name="Scenario: Delete Note">
 <kw name="Given 1 note exists" library="keys">
@@ -207,10 +201,10 @@
 <arguments>
 <arg>//android.widget.LinearLayout[contains(@resource-id,'note_layout')]</arg>
 </arguments>
-<msg timestamp="20170803 11:05:05.053" level="INFO">Current page contains element '//android.widget.LinearLayout[contains(@resource-id,'note_layout')]'.</msg>
-<status status="PASS" endtime="20170803 11:05:05.053" starttime="20170803 11:05:04.977"></status>
+<msg timestamp="20170803 11:33:42.898" level="INFO">Current page contains element '//android.widget.LinearLayout[contains(@resource-id,'note_layout')]'.</msg>
+<status status="PASS" endtime="20170803 11:33:42.898" starttime="20170803 11:33:42.820"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:05:05.054" starttime="20170803 11:05:04.976"></status>
+<status status="PASS" endtime="20170803 11:33:42.898" starttime="20170803 11:33:42.820"></status>
 </kw>
 <kw name="When User taps on Note" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -218,10 +212,10 @@
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']</arg>
 </arguments>
-<msg timestamp="20170803 11:05:05.056" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
-<status status="PASS" endtime="20170803 11:05:05.283" starttime="20170803 11:05:05.055"></status>
+<msg timestamp="20170803 11:33:42.898" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'note_name') and @text='Test1']'.</msg>
+<status status="PASS" endtime="20170803 11:33:43.136" starttime="20170803 11:33:42.898"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:05:05.284" starttime="20170803 11:05:05.054"></status>
+<status status="PASS" endtime="20170803 11:33:43.136" starttime="20170803 11:33:42.898"></status>
 </kw>
 <kw name="And User taps on Edit Note button" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -229,10 +223,10 @@
 <arguments>
 <arg>//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]</arg>
 </arguments>
-<msg timestamp="20170803 11:05:05.286" level="INFO">Clicking element '//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]'.</msg>
-<status status="PASS" endtime="20170803 11:05:06.063" starttime="20170803 11:05:05.286"></status>
+<msg timestamp="20170803 11:33:43.136" level="INFO">Clicking element '//android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]'.</msg>
+<status status="PASS" endtime="20170803 11:33:43.922" starttime="20170803 11:33:43.136"></status>
 </kw>
-<status status="PASS" endtime="20170803 11:05:06.063" starttime="20170803 11:05:05.285"></status>
+<status status="PASS" endtime="20170803 11:33:43.922" starttime="20170803 11:33:43.136"></status>
 </kw>
 <kw name="And User taps on Dots icon" library="keys">
 <kw name="Click Element" library="AppiumLibrary">
@@ -240,5 +234,52 @@
 <arguments>
 <arg>//android.widget.TextView[contains(@resource-id,'action_dotes')]</arg>
 </arguments>
-<msg timestamp="20170803 11:05:06.065" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'action_dotes')]'.</msg>
-<status status="PASS" endtime="20170803 11:05:07.020" starttime="20170803 11:05:06.065">
+<msg timestamp="20170803 11:33:43.922" level="INFO">Clicking element '//android.widget.TextView[contains(@resource-id,'action_dotes')]'.</msg>
+<status status="PASS" endtime="20170803 11:33:44.847" starttime="20170803 11:33:43.922"></status>
+</kw>
+<status status="PASS" endtime="20170803 11:33:44.847" starttime="20170803 11:33:43.922"></status>
+</kw>
+<kw name="And Selects Delete option" library="keys">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//android.widget.LinearLayout[@index='1']</arg>
+</arguments>
+<msg timestamp="20170803 11:33:44.847" level="INFO">Clicking element '//android.widget.LinearLayout[@index='1']'.</msg>
+<status status="PASS" endtime="20170803 11:33:45.882" starttime="20170803 11:33:44.847"></status>
+</kw>
+<status status="PASS" endtime="20170803 11:33:45.882" starttime="20170803 11:33:44.847"></status>
+</kw>
+<kw name="Then Note gets deleted" library="keys">
+<kw name="Page Should Not Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page not contains `locator` element.</doc>
+<arguments>
+<arg>//android.widget.LinearLayout[contains(@resource-id,'note_layout')]</arg>
+</arguments>
+<msg timestamp="20170803 11:33:45.992" level="INFO">Current page not contains element '//android.widget.LinearLayout[contains(@resource-id,'note_layout')]'.</msg>
+<status status="PASS" endtime="20170803 11:33:46.007" starttime="20170803 11:33:45.882"></status>
+</kw>
+<status status="PASS" endtime="20170803 11:33:46.007" starttime="20170803 11:33:45.882"></status>
+</kw>
+<status status="PASS" endtime="20170803 11:33:46.007" critical="yes" starttime="20170803 11:33:42.820"></status>
+</test>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application.</doc>
+<status status="PASS" endtime="20170803 11:33:52.412" starttime="20170803 11:33:46.070"></status>
+</kw>
+<status status="PASS" endtime="20170803 11:33:52.412" starttime="20170803 11:32:36.833"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TS1" pass="3">TS1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

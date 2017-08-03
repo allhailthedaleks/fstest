@@ -1,11 +1,12 @@
 *** Variables ***
+# Note
 ${noteName}     Test1
 ${noteText}     123
 
 *** Keywords ***
-
 Setup Suite
-    Open Application    ${DEV.APPIUM_SERVER}    platformName=${DEV.PLATFORM_NAME}   platformVersion=${DEV.PLATFORM_VERSION}     deviceName=${DEV.DEVICE_NAME}   appPackage=${DEV.PACKAGE_NAME}  appActivity=${DEV.ACTIVITY_NAME}
+    Open Application    ${DEV.APPIUM_SERVER}    platformName=${DEV.PLATFORM_NAME}   platformVersion=${DEV.PLATFORM_VERSION}
+    ...     deviceName=${DEV.DEVICE_NAME}   appPackage=${DEV.PACKAGE_NAME}  appActivity=${DEV.ACTIVITY_NAME}
 
 
 User taps on Plus button

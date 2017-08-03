@@ -7,11 +7,12 @@ Resource            keys.txt
 *** Variables ***
 # Appium configurations
 ${DEV.APPIUM_SERVER}        http://127.0.0.1:4723/wd/hub
-${DEV.PLATFORM_VERSION}     5.0.2
+${DEV.PLATFORM_VERSION}     5.0.2               #change to your android version
 ${DEV.PLATFORM_NAME}        Android
-${DEV.DEVICE_NAME}          LJC6BMZ999999999
+${DEV.DEVICE_NAME}          LJC6BMZ999999999    #change to your device name
 ${DEV.PACKAGE_NAME}         world.of.notes
 ${DEV.ACTIVITY_NAME}        notepad.com.won.activities.MainActivity
+
 
 *** Test Cases ***
 Scenario: Create a new note
@@ -25,8 +26,8 @@ Scenario: Add Note to Favorites
     Given 1 note exists
     When User taps on Note
     And User taps on Edit Note button
-	And User taps on Star icon
-	Then Note is added to Favorites List
+    And User taps on Star icon
+    Then Note is added to Favorites List
 
 Scenario: Delete Note
     Given 1 note exists
