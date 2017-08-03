@@ -22,35 +22,33 @@ User enters Name and Note Text
     Input Text  edit_text_desc  ${noteText}
 
 User dismisses keyboard and taps on Create Note button
+    # press hardware Back button to dismiss keyboard
     Press Keycode   4
     Click Element   //android.widget.TextView[contains(@resource-id,'create_note_btn_text')]
 
 Note is created successfully
-    Page Should Contain Element     //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
+    Page Should Contain Element   //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
 
 1 note exists
-    Page Should Contain Element     //android.widget.LinearLayout[contains(@resource-id,'note_layout')]
+    Page Should Contain Element   //android.widget.LinearLayout[contains(@resource-id,'note_layout')]
 
 User taps on Note
-    Click Element       //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
+    Click Element   //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
 
 User taps on Edit Note button
-    Click Element     //android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]
+    Click Element   //android.widget.LinearLayout[contains(@resource-id,'btn_save_note')]
 
 User taps on Star icon
     Click Element   //android.widget.TextView[contains(@resource-id,'action_favorite')]
 
-User taps on Back arrow
+Note is added to Favorites List
+    # tap on Back arrow
     Click Element   //android.widget.ImageButton[@index='0']
-
-User taps on Sandwich icon
+    # tap on sandwich icon
     Click Element   //android.widget.ImageButton[@index='0']
-
-Selects Favorites menu option
+    # tap on Favorites menu option
     Click Element   design_menu_item_text
-
-Favorites List contains the Note
-    Page Should Contain Element     //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
+    Page Should Contain Element   //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
 
 User taps on Dots icon
     Click Element   //android.widget.TextView[contains(@resource-id,'action_dotes')]
@@ -59,5 +57,5 @@ Selects Delete option
     Click Element   //android.widget.LinearLayout[@index='1']
 
 Note gets deleted
-    Page Should Not Contain Element     //android.widget.LinearLayout[contains(@resource-id,'note_layout')]
+    Page Should Not Contain Element   //android.widget.LinearLayout[contains(@resource-id,'note_layout')]
 

@@ -21,15 +21,12 @@ Scenario: Create a new note
     And User dismisses keyboard and taps on Create Note button
     Then Note is created successfully
 
-Scenario: Add Note to Favorites and Verify it's present in Favorites List
+Scenario: Add Note to Favorites
     Given 1 note exists
     When User taps on Note
     And User taps on Edit Note button
 	And User taps on Star icon
-	User taps on Back arrow
-	And User taps on Sandwich icon
-	And Selects Favorites menu option
-	Then Favorites List contains the Note
+	Then Note is added to Favorites List
 
 Scenario: Delete Note
     Given 1 note exists
