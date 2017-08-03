@@ -1,4 +1,5 @@
 *** Keywords ***
+
 Setup Suite
     Open Application    ${DEV.APPIUM_SERVER}    platformName=${DEV.PLATFORM_NAME}   platformVersion=${DEV.PLATFORM_VERSION}
     ...     deviceName=${DEV.DEVICE_NAME}   appPackage=${DEV.PACKAGE_NAME}  appActivity=${DEV.ACTIVITY_NAME}
@@ -14,7 +15,6 @@ User taps on Create Note button
 
 User enters Note name
     [Arguments]      ${noteName}
-    Wait Until Page Contains Element    //android.widget.EditText[contains(@resource-id,'edit_text_name')]
     Input Text  edit_text_name  ${noteName}
 
 User enters Note text
@@ -27,9 +27,9 @@ User dismisses keyboard and taps on Create Note button
     Click Element   //android.widget.TextView[contains(@resource-id,'create_note_btn_text')]
 
 Note is created successfully
-    There is Note with name     ${noteName}
+    There is Note  ${noteName}
 
-There is Note with name
+There is Note
     [Arguments]      ${noteName}
     Page Should Contain Element   //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
 
@@ -52,6 +52,8 @@ Favorites List contains Note
     # tap on Favorites menu option
     Click Element   design_menu_item_text
     Page Should Contain Element   //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
+    # tap on Back arrow to get back to notes list
+    Click Element   //android.widget.ImageButton[@index='0']
 
 User taps on Dots icon
     Click Element   //android.widget.TextView[contains(@resource-id,'action_dotes')]
@@ -59,6 +61,6 @@ User taps on Dots icon
 Selects Delete option
     Click Element   //android.widget.LinearLayout[@index='1']
 
-Note gets deleted
-    Page Should Not Contain Element   //android.widget.LinearLayout[contains(@resource-id,'note_layout')]
+Note ${noteName} is deleted
+    Page Should Not Contain Element   //android.widget.TextView[contains(@resource-id,'note_name') and @text='${noteName}']
 

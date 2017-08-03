@@ -22,22 +22,22 @@ ${noteText}     123
 Scenario: Create a new note
     When User taps on Plus button
     And User taps on Create Note button
-    And User enters Note name   ${noteName}
-    And User enters Note text   ${noteText}
+    And User enters Note name  ${noteName}
+    And User enters Note text  ${noteText}
     And User dismisses keyboard and taps on Create Note button
     Then Note is created successfully
 
 Scenario: Add Note to Favorites
-    Given There is Note with name   ${noteName}
+    Given There is Note  ${noteName}
     When User taps on Note  ${noteName}
     And User taps on Edit Note button
     And User taps on Star icon
-    Then Favorites List contains Note    ${noteName}
+    Then Favorites List contains Note  ${noteName}
 
 Scenario: Delete Note
-    Given There is Note with name   ${noteName}
+    Given There is Note  ${noteName}
     When User taps on Note  ${noteName}
     And User taps on Edit Note button
     And User taps on Dots icon
     And Selects Delete option
-    Then Note gets deleted
+    Then Note ${noteName} is deleted
